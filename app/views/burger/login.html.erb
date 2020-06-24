@@ -1,6 +1,12 @@
+<%# addition  
+to add image to rails apply the following syntax: %>
+<%= image_tag "logo.png" %>
+
 <h1>login</h1> 
 
-<form action="<%= root_path %>" method= "POST">  
+<form action="<%= login_path %>" method= "POST">  
+
+<input type="hidden" value="<%form_authenticity_token%>" name="authenticity_token">
 
 <label>Username</label>  
 <input type="text" name="account[username]">
@@ -8,6 +14,17 @@
 <label>Password</label> 
 <input type="text" name="account[password]">  
 
-<input type="submit" value="login">
+<input type="submit" value="Login">
+
+</form> 
+
+<form action="<%= login_path %>" method= "POST">  
+
+
+</form> 
+
+<form action="<%= signup_path %>" method= "GET"> 
+
+<input type="submit" value="Sign Up">  
 
 </form>

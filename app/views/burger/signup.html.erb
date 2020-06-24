@@ -1,0 +1,20 @@
+<h1> I sign up here</h1> 
+
+<form  action="<%= signup_data_path %>" method= "POST">  
+
+<label>Username</label>
+<input type="text" name="profile[username]" required> 
+<label>Password</label>
+<input type="text" name="profile[password]" required> 
+<label>Email</label>
+<input type="text" name="profile[email]" required> 
+<label>Number</label>
+<input type="text" name="profile[number]"> 
+<label>Preference ;)</label>
+<input type="text" name="profile[prefrence]" required> 
+<label>Bio</label>
+<input type="text" name="profile[bio]" required> 
+
+<input type="submit" value="Submit" required>
+
+</form>
