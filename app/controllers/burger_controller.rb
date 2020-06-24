@@ -28,8 +28,13 @@ class BurgerController < ApplicationController
 
    @profile = session[:new_profile]   
    puts "_____________________________"
-   puts @profile.last["username"] 
+   puts @profile.last["username"]   
+
+   @user = User.create(username: @profile.last["username"], password: @profile.last["password"], email: @profile.last["email"], number: @profile.last["number"], preference: @profile.last["preference"], bio: @profile.last["bio"])
+
+   p @user
    
+
    redirect_to profile_path(@profile.last["username"]) 
  end
 
