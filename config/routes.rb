@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   # post "/sign_up", to: "burger#sign_up"
 
-  post "/", to: "burger#processing"  
+  post "/", to: "burger#processing", as: "login_processing" 
 
   
   # sign up routes
